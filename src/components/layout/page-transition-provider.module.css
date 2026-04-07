@@ -1,0 +1,273 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.curtain {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(20, 18, 16, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 18, 16, 0.02) 1px, transparent 1px),
+    var(--bg);
+  background-size: 120px 120px, 120px 120px, auto;
+  box-shadow: 0 22px 60px rgba(20, 18, 16, 0.08);
+}
+
+.rope {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  margin-left: -2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #9d7556 0%, #7b573f 100%);
+}
+
+.traveler {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5.4rem;
+  height: 8rem;
+  transform-origin: 50% 100%;
+}
+
+.travelerStanding,
+.travelerHangingPose,
+.travelerParachutePose {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  transition: opacity 180ms ease;
+}
+
+.travelerStanding {
+  opacity: 1;
+}
+
+.travelerHangingPose {
+  opacity: 0;
+}
+
+.travelerParachutePose {
+  opacity: 0;
+}
+
+.travelerWalking .travelerStanding,
+.travelerDropping .travelerStanding {
+  opacity: 1;
+}
+
+.travelerWalking .travelerHangingPose,
+.travelerDropping .travelerHangingPose,
+.travelerWalking .travelerParachutePose,
+.travelerDropping .travelerParachutePose {
+  opacity: 0;
+}
+
+.travelerHanging .travelerStanding {
+  opacity: 0;
+}
+
+.travelerHanging .travelerHangingPose {
+  opacity: 1;
+}
+
+.travelerParachuting .travelerStanding,
+.travelerParachuting .travelerHangingPose {
+  opacity: 0;
+}
+
+.travelerParachuting .travelerParachutePose {
+  opacity: 1;
+}
+
+.travelerSvg,
+.hangingSvg,
+.parachuteSvg {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.travelerFigure {
+  transform-origin: 50% 100%;
+}
+
+.travelerHair {
+  fill: rgba(255, 255, 255, 0.98);
+  stroke: var(--ink);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.travelerHead,
+.travelerTorso,
+.travelerArmBack path,
+.travelerArmFront path,
+.travelerLegBack path,
+.travelerLegFront path,
+.travelerFace,
+.hangingHead,
+.hangingTorso,
+.hangingArm,
+.hangingLeg,
+.hangingRope,
+.parachuteLine,
+.parachuteHead,
+.parachuteArm,
+.parachuteLeg,
+.parachuteHand,
+.parachutePanel {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.travelerHead,
+.travelerTorso,
+.hangingHead,
+.parachuteHead {
+  fill: rgba(255, 255, 255, 0.98);
+}
+
+.travelerFace {
+  stroke-width: 2.5;
+}
+
+.travelerPupil {
+  fill: var(--ink);
+}
+
+.parachuteSvg {
+  height: 14.5rem;
+}
+
+.parachuteCanopy {
+  fill: var(--ink);
+  stroke: var(--ink);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.parachutePanel {
+  stroke-width: 2.2;
+  stroke: rgba(252, 252, 248, 0.88);
+}
+
+.parachuteTravelerGroup {
+  transform-origin: 50% 62%;
+}
+
+.travelerArmBack,
+.travelerArmFront,
+.travelerLegBack,
+.travelerLegFront {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+}
+
+.travelerArmBack {
+  transform: rotate(-8deg);
+}
+
+.travelerArmFront {
+  transform: rotate(10deg);
+}
+
+.travelerLegBack {
+  transform: rotate(8deg);
+}
+
+.travelerLegFront {
+  transform: rotate(-8deg);
+}
+
+.travelerWalking .travelerFigure {
+  animation: travelerBob 760ms ease-in-out infinite;
+}
+
+.travelerWalking .travelerArmFront,
+.travelerWalking .travelerLegBack {
+  animation: travelerSwingForward 760ms ease-in-out infinite;
+}
+
+.travelerWalking .travelerArmBack,
+.travelerWalking .travelerLegFront {
+  animation: travelerSwingBackward 760ms ease-in-out infinite;
+}
+
+.travelerHanging .travelerHangingPose {
+  animation: hangingSway 920ms ease-in-out infinite;
+}
+
+.travelerParachuting .travelerParachutePose {
+  animation: parachuteDrift 2200ms ease-in-out infinite;
+}
+
+@keyframes travelerBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.14rem);
+  }
+}
+
+@keyframes travelerSwingForward {
+  0%,
+  100% {
+    transform: rotate(14deg);
+  }
+
+  50% {
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes travelerSwingBackward {
+  0%,
+  100% {
+    transform: rotate(-14deg);
+  }
+
+  50% {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes hangingSway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes parachuteDrift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.85deg);
+  }
+
+  50% {
+    transform: translateY(0.08rem) rotate(0.85deg);
+  }
+}

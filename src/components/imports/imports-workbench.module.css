@@ -1,0 +1,268 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero,
+.form,
+.reviewSection,
+.resultCard {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 1.7rem;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.hero h1 {
+  max-width: 48rem;
+  margin: 0.45rem 0 0.8rem;
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 0.92;
+}
+
+.hero p {
+  max-width: 46rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(191, 118, 64, 0.14);
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.pipeline {
+  min-width: 18rem;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--muted);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.field span {
+  font-weight: 600;
+}
+
+.field textarea,
+.toolbar input,
+.controls select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(73, 56, 48, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 250, 244, 0.92);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.field textarea {
+  min-height: 12rem;
+}
+
+.formActions,
+.toolbar {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primaryButton,
+.secondaryButton {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.05rem;
+}
+
+.primaryButton {
+  background: var(--ink);
+  color: #f9f2e9;
+}
+
+.secondaryButton {
+  background: rgba(191, 118, 64, 0.12);
+  color: var(--ink);
+}
+
+.error {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: rgba(164, 58, 46, 0.12);
+  color: #7d3025;
+}
+
+.reviewSection {
+  display: grid;
+  gap: 1rem;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.reviewHeader h2 {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-serif), serif;
+  font-size: 2.5rem;
+  line-height: 0.95;
+}
+
+.statGrid {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+
+.warningList {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.warningList p {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  background: rgba(191, 118, 64, 0.1);
+  color: var(--muted);
+}
+
+.toolbar input {
+  max-width: 24rem;
+}
+
+.candidateList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.candidateCard {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.1rem;
+  border-radius: 1.25rem;
+  background: rgba(36, 26, 24, 0.04);
+}
+
+.candidateHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.candidateHeader h3 {
+  margin: 0.3rem 0 0;
+  font-size: 1.3rem;
+}
+
+.candidateSource,
+.candidateDate {
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+.candidateCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagRow span {
+  padding: 0.35rem 0.68rem;
+  border-radius: 999px;
+  background: rgba(191, 118, 64, 0.12);
+  font-size: 0.8rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls label {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--muted);
+}
+
+.resultCard {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.resultCard h3 {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: 2rem;
+}
+
+.resultCard p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resultCard pre {
+  overflow: auto;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #201917;
+  color: #f7f0e7;
+  font-size: 0.84rem;
+}
+
+@media (max-width: 920px) {
+  .hero,
+  .reviewHeader {
+    flex-direction: column;
+  }
+
+  .form,
+  .candidateList {
+    grid-template-columns: 1fr;
+  }
+}

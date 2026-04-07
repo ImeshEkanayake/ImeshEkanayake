@@ -1,0 +1,235 @@
+import { demoResearchEvents } from "./research-data";
+import type { PersonProfile, TimelineEvent } from "./types";
+
+export const demoProfile: PersonProfile = {
+  name: "Imesh Udara Ekanayake",
+  role: "PhD Candidate at RMIT | Founder of CIAIR | Ex-McKinsey Consulting Analyst",
+  intro:
+    "Applied machine learning researcher and product-minded data scientist working across privacy, fairness, explainability, and performance.",
+  futureTeaser:
+    "The next chapter is being written across research, teaching, and AI products built for high-stakes settings.",
+  location: "Melbourne, Australia",
+  note:
+    "Scholar profile snapshot: 1,432 citations and an h-index of 14, with work spanning applied machine learning, AI privacy, AI fairness, and explainability.",
+  socialLinks: [
+    { label: "LinkedIn", url: "https://lk.linkedin.com/in/imesh-ekanayake" },
+    { label: "Scholar", url: "https://scholar.google.com/citations?user=PUWme24AAAAJ&hl=en" },
+    { label: "GitHub", url: "https://github.com/ImeshEkanayake" },
+    { label: "Email", url: "mailto:imesh.ekanayake@rmit.edu.au" },
+  ],
+};
+
+export const demoEvents: TimelineEvent[] = [
+  {
+    id: "dialog-app-challenge",
+    slug: "dialog-app-challenge",
+    tabs: ["full_story", "other_activities"],
+    title: "A first public win arrives early",
+    dateStart: "2016",
+    displayDate: "2016",
+    lane: "top",
+    summary:
+      "Winning the Dialog App Challenge marked an early signal that building useful digital products could become a serious path.",
+    details:
+      "This opening chapter captures the first strong public validation of the journey: a first-place finish at the Dialog App Challenge, followed by the momentum to keep competing, building, and learning in public.",
+    tags: ["competition", "product", "origin"],
+    links: [],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  {
+    id: "bsc-computer-engineering",
+    slug: "bsc-computer-engineering",
+    tabs: ["full_story", "education"],
+    title: "Computer engineering foundations take shape at Peradeniya",
+    dateStart: "2017",
+    dateEnd: "2021",
+    displayDate: "2017-2021",
+    lane: "bottom",
+    summary:
+      "The University of Peradeniya years built the engineering base behind later work in data science, machine learning, and systems thinking.",
+    details:
+      "Bachelor of Science of Engineering in Computer Engineering at the University of Peradeniya. This period established the technical grounding that later expanded into applied machine learning, explainability, and high-stakes AI work.",
+    tags: ["education", "computer engineering"],
+    links: [],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  {
+    id: "competitive-coding-run",
+    slug: "competitive-coding-run",
+    tabs: ["full_story", "other_activities"],
+    title: "Competitive coding sharpens speed and problem solving",
+    dateStart: "2017",
+    dateEnd: "2019",
+    displayDate: "2017-2019",
+    lane: "top",
+    summary:
+      "National and global coding competitions became a training ground for disciplined reasoning under pressure.",
+    details:
+      "This stretch includes Google Code Jam 2017 with a top-10 national finish, IEEExtreme 12.0 in the global top 500, and IEEExtreme 13.0 in the global top 300. It was an early proving ground for fast iteration and structured problem solving.",
+    tags: ["competition", "coding", "leadership"],
+    links: [],
+    media: [],
+    priority: 2,
+    status: "past",
+  },
+  {
+    id: "octave-internship",
+    slug: "octave-internship",
+    tabs: ["full_story", "experience"],
+    title: "Industry work starts with data science delivery at OCTAVE",
+    dateStart: "2021-03",
+    dateEnd: "2021-09",
+    displayDate: "Mar-Sep 2021",
+    lane: "top",
+    summary:
+      "The first formal industry role combined data science, dashboarding, stakeholder coordination, and pilot delivery.",
+    details:
+      "As an intern in Data Science and Project Delivery at OCTAVE, part of John Keells Holdings, the work covered dashboard building, propensity modeling, sprint coordination, solution design, campaign analysis, and moving projects from ideation to pilot.",
+    tags: ["experience", "data science", "delivery"],
+    links: [],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  {
+    id: "peradeniya-research-and-teaching",
+    slug: "peradeniya-research-and-teaching",
+    tabs: ["full_story", "experience"],
+    title: "Research and teaching responsibilities deepen at Peradeniya",
+    dateStart: "2021-10",
+    dateEnd: "2023-04",
+    displayDate: "Oct 2021-Apr 2023",
+    lane: "bottom",
+    summary:
+      "Research assistant work and teaching responsibilities run in parallel, building both publication depth and mentoring experience.",
+    details:
+      "This chapter combines Research Assistant work in the Department of Computer Engineering at the University of Peradeniya with a period as a Temporary Instructor. It included supervising students, designing labs and tutorials, and contributing to a growing body of machine learning research.",
+    tags: ["experience", "research", "teaching"],
+    links: [],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  {
+    id: "peer-review-and-recognition",
+    slug: "peer-review-and-recognition",
+    tabs: ["full_story", "other_activities"],
+    title: "Peer review and recognition become part of the public profile",
+    dateStart: "2022-05",
+    dateEnd: "2026-12",
+    displayDate: "2022-present",
+    lane: "bottom",
+    summary:
+      "The work begins to carry external trust through journal reviewing, conference recognition, and a strong citation profile.",
+    details:
+      "This ongoing chapter includes peer-review service for venues such as Scientific Reports, Diabetology & Metabolic Syndrome, Progress in Computational Fluid Dynamics, and the KDU International Research Conference. It also includes the MERCon 2022 best paper award in machine learning and the recognition tied to the most cited paper in Case Studies in Construction Materials.",
+    tags: ["service", "awards", "peer review"],
+    links: [{ label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=PUWme24AAAAJ&hl=en" }],
+    media: [],
+    priority: 1,
+    status: "current",
+  },
+  {
+    id: "mckinsey-consulting-analyst",
+    slug: "mckinsey-consulting-analyst",
+    tabs: ["full_story", "experience"],
+    title: "Consulting brings machine learning into transformation work",
+    dateStart: "2023-05",
+    dateEnd: "2023-10",
+    displayDate: "May-Oct 2023",
+    lane: "top",
+    summary:
+      "At McKinsey, the analytical toolkit expands into structured problem solving, client communication, and implementation inside transformation work.",
+    details:
+      "As a Consulting Analyst at McKinsey & Company, the work centered on gathering and analyzing information, testing hypotheses, communicating recommendations, and delivering implementation support with client teams.",
+    tags: ["experience", "consulting", "strategy"],
+    links: [{ label: "LinkedIn profile", url: "https://lk.linkedin.com/in/imesh-ekanayake" }],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  {
+    id: "rmit-phd",
+    slug: "rmit-phd",
+    tabs: ["full_story", "education", "research"],
+    title: "The PhD chapter starts at RMIT",
+    dateStart: "2023-10",
+    dateEnd: "2026-12",
+    displayDate: "2023-present",
+    lane: "bottom",
+    summary:
+      "Doctoral research at RMIT focuses the long-term agenda around privacy, accuracy, and the performance of machine learning systems.",
+    details:
+      "Imesh is currently reading for a PhD at RMIT University in Melbourne. The research direction centers on privacy, accuracy, and performance in machine learning, building on earlier work in explainability and applied AI.",
+    tags: ["education", "phd", "research"],
+    links: [
+      { label: "RMIT University", url: "https://www.rmit.edu.au" },
+      { label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=PUWme24AAAAJ&hl=en" },
+    ],
+    media: [],
+    priority: 1,
+    status: "current",
+  },
+  {
+    id: "rmit-teaching-assistant",
+    slug: "rmit-teaching-assistant",
+    tabs: ["full_story", "experience"],
+    title: "Teaching at RMIT keeps the classroom thread alive",
+    dateStart: "2024-03",
+    dateEnd: "2026-12",
+    displayDate: "2024-present",
+    lane: "bottom",
+    summary:
+      "Alongside doctoral work, teaching remains a live part of the story through courses in algorithms and social network analysis.",
+    details:
+      "As a Teaching Assistant at RMIT University, the current teaching portfolio includes Algorithm and Analysis plus Social Media and Network Analysis. It keeps mentoring and technical communication close to the center of the work.",
+    tags: ["experience", "teaching", "mentoring"],
+    links: [{ label: "RMIT University", url: "https://www.rmit.edu.au" }],
+    media: [],
+    priority: 1,
+    status: "current",
+  },
+  {
+    id: "ciair-founder",
+    slug: "ciair-founder",
+    tabs: ["full_story", "experience", "other_activities"],
+    title: "CIAIR turns research instincts into institution building",
+    dateStart: "2024-04",
+    dateEnd: "2026-12",
+    displayDate: "2024-present",
+    lane: "top",
+    summary:
+      "Founding CIAIR opens a parallel chapter focused on industrial AI application, research translation, and long-term institution building.",
+    details:
+      "As Founder and Director of the Ceylon Institute for Artificial Intelligence and Research, the work centers on advancing industrial AI applications while building a platform for research-led innovation beyond a single employer or university role.",
+    tags: ["experience", "founder", "leadership"],
+    links: [{ label: "LinkedIn profile", url: "https://lk.linkedin.com/in/imesh-ekanayake" }],
+    media: [],
+    priority: 2,
+    status: "current",
+  },
+  {
+    id: "newtonrussell-product-lead",
+    slug: "newtonrussell-product-lead",
+    tabs: ["full_story", "experience"],
+    title: "Product leadership moves the work into multi-agent systems",
+    dateStart: "2025-07",
+    dateEnd: "2025-11",
+    displayDate: "Jul-Nov 2025",
+    lane: "top",
+    summary:
+      "At NewtonRussell, the chapter shifts toward product ownership, delivery strategy, and multi-agent systems for risk assessment.",
+    details:
+      "As Product Lead at NewtonRussell, the work focused on multi-agent systems used to assess non-financial risk in Australian banks, while balancing roadmap ownership, release planning, client-side technical communication, and team workload.",
+    tags: ["experience", "product", "multi-agent systems"],
+    links: [],
+    media: [],
+    priority: 1,
+    status: "past",
+  },
+  ...demoResearchEvents,
+];
